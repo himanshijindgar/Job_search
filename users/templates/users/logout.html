@@ -1,0 +1,9 @@
+{% extends "home_app/base.html" %}
+{% block content %}
+    <h2 style="padding: 20px; color: green;">You have been logged out.</h2>
+    	<div class="border-top pt-3" style="padding: 20px;">
+    		<small class="text-muted">Already have an account?
+    			<a href="{% url 'login' %}" class="ml-2">Login Again</a>
+    		</small>
+    	</div>
+{% endblock content%} 
