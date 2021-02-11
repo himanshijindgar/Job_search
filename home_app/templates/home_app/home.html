@@ -1,0 +1,85 @@
+{% extends "home_app/base.html" %}
+{% load static %}
+{% block content %}
+    <div class = "logo">
+        <div class = "wallpaper">
+            <div class="row justify-content-start"  style="padding-top:10px; padding-left: 30px;">
+                <h1>Search Here</h1>
+            </div>
+        </div>
+        <form method = "POST">
+        <div class="col justify-content-center" style="padding-top:10px; font-weight: bold;">
+            <label>Enter Job Category</label>
+        </div>
+        <div class="col justify-content-center">
+            <input class="mr-3 form-control border-0 px-4" style="background-color: black; color: white; max-width: 300px;" placeholder="job category"></input>
+        </div>
+        <div class="col justify-content-center" style="padding-top:10px; font-weight: bold;">
+            <label>Enter Job Location</label>
+        </div>
+        <div class="col justify-content-center">
+            <input class="mr-3 form-control border-0 px-4" style="background-color: black; color: white; max-width: 300px;" placeholder="job location"></input>
+        </div>
+        <div class="col justify-content-center" style="padding-top:50px; padding-left: 15px;">
+            <button class="btn btn-primary" style="background-color: green;"><a href="{% url 'app_about' %}" style="color: yellow;">Search</a></button>
+        </div>
+        </form>
+    </div>
+
+    <div class="container body-content">
+        <div class="col justify-content-center" style="padding-top:90px; padding-left:367px;">
+            <p style="color: green; font-weight:bold;">_______________________________________________________</p>
+            <h1 style="color: green;">&nbspPopular Categories</h1>
+            <p style="color: green; font-weight:bold;">_______________________________________________________</p>
+        </div>
+<!--     <div class="container"> -->
+        <div class="row justify-content-start" style="padding-top:50px;">
+            <div class="col" style="padding-top:10px;">
+                <img alt="Driver image" width="90%" height="90%" style="max-height:500px;max-width:500px;"  src="{% static 'home_app/driver.jpeg' %}"/>
+            </div>
+            <div class="col" style="padding-top:10px;">
+                <img alt="Cook image" width="90%" height="90%" style="max-height:500px;max-width:500px;" src="{% static 'home_app/cook.jpeg' %}"/>
+            </div>
+            <div class="col" style="padding-top:10px;">
+                <img alt="Cleaner image" width="90%" height="90%" style="max-height:500px;max-width:500px;" src="{% static 'home_app/cleaner.jpeg' %}"/>
+            </div>
+        </div>
+        <div class="row justify-content-start" style="padding-top:10px;">
+            <div class="col" style="padding-top:10px;">
+                <img alt="Plumber image" width="90%" height="90%" style="max-height:500px;max-width:500px;" src="{% static 'home_app/plumber.jpeg' %}" />
+            </div>
+            <div class="col" style="padding-top:10px;">
+                <img alt="Delivery Staff image" width="90%" height="90%" style="max-height:500px;max-width:500px;" src="{% static 'home_app/delivery.jpeg' %}" />
+            </div>
+            <div class="col" style="padding-top:10px;">
+                <img alt="Labour Image" width="90%" height="90%" style="max-height:500px;max-width:500px;" src="{% static 'home_app/labour.jpeg' %}" />
+            </div>
+        </div>
+    </div>
+<!--</div>-->
+    <div class="nothing" style="border: 4px solid green; margin-left: 80px; margin-right: 105px; margin-top: 40px; margin-bottom: 70px;">
+    <div class="col justify-content-center" style="padding-top:30px; padding-left:400px;">
+        <p style="font-weight:bold;">______________________________________________</p>
+        <h1>&nbspWhy Choose Us</h1>
+        <p style="font-weight:bold;">______________________________________________</p>
+    </div>
+    <div class="row justify-content-start"style="padding-bottom:80px;"> <!-- style="padding-top:20px;"-->
+        <div class="col justify-content-start" style="padding-top:50px; padding-left:100px;">
+            <h1 style="font-weight:bold;">More Jobs Everyday</h1>
+            <div class="col justify-content-start" style="padding-left:75px;">
+                <p>&nbsp&nbspWe upload hundreds of<br>new job openings everyday.</p>
+            </div> 
+        </div>
+        <div class="col justify-content-start" style="padding-top:50px; padding-left:-80px;">
+            <h1 style="font-weight:bold;">Friendly Employers</h1>
+            <div class="col justify-content-start" style="padding-left:75px;">
+                <p>We verify the employers'<br>&nbsp&nbspbackground details.</p>
+            </div> 
+    </div>
+    </div>
+</div>
+<div class="footer">
+    <h4 style="font-weight:bold;">About</h4>
+    <p>We provide the best of the opportunities for the Blue Collared Workers, with guaranteed safe and friendly working environments.</p>
+</div>   
+{% endblock content%}

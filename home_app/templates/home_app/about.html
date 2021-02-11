@@ -1,0 +1,12 @@
+{% extends "home_app/base.html" %}
+{% block content %} 
+    <h3 style="padding: 20px;">Here are few openings that matches your search:</h3>
+    {% for post in posts %}
+        <div class="posts" style="border: 3px solid green; padding-left: 50px; margin: 50px; background-color: black; color: white;">
+        <h5>{{ post.category }}</h5>
+        <p>By {{ post.employer }} on {{ post.date_posted }}<br>
+        At {{ post.location }}<br>
+        Contact: {{ post.contact_no }}</p>
+        </div>
+    {% endfor %}
+{% endblock content%}

@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+	<link href="{% static 'home_app/main.css' %}" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	{% if title %}
+	    <title>
+		    Current Page - {{ title }}
+	    </title>
+	{% else %}
+	     <title>
+		    Current Page
+	    </title>
+	{% endif %}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+	<div class="header" style="font-weight:bold;">
+        <ul>
+            <li class ="home">JobSearch</li>
+        {% if user.is_authenticated %}
+            <li class ="home"><a href="{% url 'profile' %}">Profile</a></li>
+            <li class ="home"><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li class ="home"><a href="{% url 'login' %}">LogIn</a></li>
+            <li class ="home"><a href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+        </ul>
+    </div>
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+        	{{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}
+</body>
+</html>
