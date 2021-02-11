@@ -1,0 +1,87 @@
+.header {
+color: white;
+font-size: 18px;
+font-family: helvetica, sans-serif;
+background-color: black;
+min-height: 50px;
+min-width: 1490px;
+text-transform: uppercase;
+position: relative;
+padding-left: -5px;
+}
+
+.header li {
+padding: 15px;
+display: inline;
+}
+
+ul {
+padding-top: 10px;
+}
+
+.logo {
+background: url("wallpaper.jpg") no-repeat;
+backgroung-size: cover;
+height: 550px;
+max-width: 1490px;
+padding-top: 140px;
+padding-left: 300px;
+margin-bottom: -50px;
+}
+.wallpaper {
+<!-- border: 2px solid black; -->
+height: 230px;
+width: 500px;
+font-size: 100px;
+text-transform: uppercase;
+color: black;
+font-weight: 100%;
+text-align: center;
+align: center;
+box-align: center;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: gray;}
+
+.footer {
+color: white;
+font-size: 12px;
+font-family: helvetica, sans-serif;
+background-color: black;
+min-height: 50px;
+min-width: 1490px;
+position: relative;
+padding-top: 20px;
+padding-left: -5px;
+padding-bottom: -150px;
+}
