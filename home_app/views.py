@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Post
 from django.contrib.auth.forms import UserCreationForm
@@ -6,12 +6,18 @@ from django.contrib.auth.forms import UserCreationForm
 def home(request):
   if request.method == 'POST':
       form = UserCreationForm(request.POST)
-      if form.is_valid():
+      return redirect('app_about')
+  else:
+      form = UserCreationForm()
+  return render(request, 'home_app/home.html', {'form': form})
+      '''if form.is_valid():
         form.save()
         return redirect('app_about')
   else:
       form = UserCreationForm()
-  return render(request, 'home_app/home.html', {'form': form})
+  return render(request, 'home_app/home.html', {'form': form})'''
+      #form.save()
+      
 
 def about(request):
   context = {
